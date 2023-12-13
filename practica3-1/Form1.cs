@@ -10,12 +10,12 @@ namespace practica3_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string textoTelegrama;
+            string textoTelegramaEEGS2324;
             char tipoTelegrama = ' ';
-            textoTelegrama = txtTelegrama.Text;
+            textoTelegramaEEGS2324 = txtTelegrama.Text;
 
             char[] delimitadores = new char[] { ' ', '\r', '\n' };
-            int numPalabras = textoTelegrama.Split(delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
+            int numPalabras = textoTelegramaEEGS2324.Split(delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
             double coste = 0;
             
 
@@ -39,7 +39,7 @@ namespace practica3_1
                 else
                     coste = 5 + 0.75 * (numPalabras - 10);
            
-            txtPrecio.Text = coste.ToString() + " euros";
+            txtPrecio.Text = coste.ToString() + " euros, EEGS2324";
         }
 
         private void ordinario_CheckedChanged(object sender, EventArgs e)
